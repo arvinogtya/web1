@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--~~~~~~~~~~~~~~~ Favicon ~~~~~~~~~~~~~~~-->
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+
+    <!--~~~~~~~~~~~~~~~ Font Awesome ~~~~~~~~~~~~~~~-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--~~~~~~~~~~~~~~~ Remix Icon ~~~~~~~~~~~~~~~-->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.4.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+
+    <!--  Swiper's CSS -->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+  />
+    <!--~~~~~~~~~~~~~~~ CSS ~~~~~~~~~~~~~~~-->
+    <link href="/dist/output.css" rel="stylesheet" />
+
+    <title>Arvino Gatya</title>
+  </head>
+  <body>
+    <!--~~~~~~~~~~~~~~~ Header ~~~~~~~~~~~~~~~-->
+    <header id="header" class="">
+      <!-- darkmode -->
+      <div class=" w-16 h-8 rounded-2xl bg-primaryColorLight border border-primaryColorLight fixed top-5 right-20 flex p-1 align-middle -translate-y-1 md:translate-y-0 dark:bg-primaryColorLight dark:text-whiteColor z-10" id="theme-toggle">
+        <input type="checkbox" class="w-12 h-12 absolute opacity-0 cursor-pointer peer darkbtn -top-3 z-30 left-2">
+       <div class="w-6 h-6 text-darkColor rounded-full align-middles transition-all peer-checked:translate-x-8 dark:text-whiteColor">
+        <i class="ri-star-line"></i>
+       </div>
+        
+   </div>
+   <!-- nav -->
+   <nav class="fixed top-2 right-2 flex flex-col md:top-3 md:right-3 z-10">
+        <div class="hamburger w-12 h-12 flex flex-col justify-evenly align-middle rounded-xl *:transition-all *:duration-500 *:dark:bg-white *:bg-slate-600">
+             <input type="checkbox" name="" id="" class="absolute w-full h-full opacity-0 peer z-10 cursor-pointer" />
+             <span class="w-4/5  rounded-md h-[5px] mx-auto peer-checked:rotate-45 group-checked:translate-x-2 origin-top-left"></span>
+             <span class="w-4/5  rounded-md h-[5px] mx-auto peer-checked:opacity-0"></span>
+             <span class="w-4/5  rounded-md h-[5px] mx-auto peer-checked:-rotate-45 group-checked:translate-x-2 origin-bottom-left"></span>
+             <ul class="w-12 dark:bg-white bg-slate shadow-lg rounded-full py-3 absolute top-14 -right-24 transition-all peer-checked:right-2 hover:text-darkColor">
+                  <li class="p-3">
+                       <a href="#home">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="fill-white dark:fill-slate-600">
+                                 <path
+                                      d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z"
+                                 />
+                            </svg>
+                       </a>
+                  </li>
+                  <li class="p-3">
+                       <a href="#project">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" class="fill-white dark:fill-slate-600">
+                                 <path d="M224 256A128 128 0 1 0 224 0a128 128 0 1 0 0 256zm-45.7 48C79.8 304 0 383.8 0 482.3C0 498.7 13.3 512 29.7 512l388.6 0c16.4 0 29.7-13.3 29.7-29.7C448 383.8 368.2 304 269.7 304l-91.4 0z" />
+                            </svg>
+                       </a>
+                  </li>
+                  <li class="p-3">
+                       <a href="#skills">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-white dark:fill-slate-600">
+                                 <path
+                                      d="M40 48C26.7 48 16 58.7 16 72l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24L40 48zM192 64c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32L192 64zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zm0 160c-17.7 0-32 14.3-32 32s14.3 32 32 32l288 0c17.7 0 32-14.3 32-32s-14.3-32-32-32l-288 0zM16 232l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0c-13.3 0-24 10.7-24 24zM40 368c-13.3 0-24 10.7-24 24l0 48c0 13.3 10.7 24 24 24l48 0c13.3 0 24-10.7 24-24l0-48c0-13.3-10.7-24-24-24l-48 0z"
+                                 />
+                            </svg>
+                       </a>
+                  </li>
+                  <li class="p-3">
+                       <a href="#contact">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" class="fill-white dark:fill-slate-600">
+                                 <path
+                                      d="M48 64C21.5 64 0 85.5 0 112c0 15.1 7.1 29.3 19.2 38.4L236.8 313.6c11.4 8.5 27 8.5 38.4 0L492.8 150.4c12.1-9.1 19.2-23.3 19.2-38.4c0-26.5-21.5-48-48-48L48 64zM0 176L0 384c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-208L294.4 339.2c-22.8 17.1-54 17.1-76.8 0L0 176z"
+                                 />
+                            </svg>
+                       </a>
+                  </li>
+             </ul>
+        </div>
+   </nav>
+    </header>
+
+    <main>
+      <!--~~~~~~~~~~~~~~~ Home ~~~~~~~~~~~~~~~-->
+      <section id="home">
+        <div class="container flex flex-col items-center justify-center md:flex-row">
+          <!-- blob -->
+          <div class=" absolute right-0 top-[-20%] w-80 h-80  bg-purple-400 dark:bg-pink-400 mix-blend-screen rounded-full blur-[150px] opacity-50"></div>
+
+          <div class="mx-auto md:basis-1/2 lg:basis-2/5">
+            <img src="./img/" alt="person" class="my-10 max-w-[90%] duration-300 origin-center rotate-[4.5deg] border-2 border-primaryColorLight rounded-[38px] hover:rotate-0 hover:border-purple-400">
+          </div>
+          <div class="text-center md:basis-1/2 md:text-start lg:basis-3/5">
+            <h1 class="home__title">I am Arvino</h1>
+            <div class="separator mx-auto"></div>
+            <span class="title">Network Engineer + Web Developer</span>
+            <div class="text-base flex items-center justify-center gap-3 py-10 md:justify-start md:gap-20 hover:text-darkColor">
+                <button class="btn_outline">
+                  Download CV <i class="fa-solid fa-download"></i>
+                </button>
+                <div class="flex items-center gap-3">
+                  <div class="social-icon">
+                    <a href="https://www.instagram.com/arviinogtya"><i class="fa-brands fa-instagram z-10"></i></a>
+                  </div>
+                  <div class="social-icon">
+                    <i class="fa-brands fa-linkedin z-10"></i>
+                  </div>
+                  <div class="social-icon">
+                    <a href="https://www.youtube.com/arvinoogty"><i class="fa-brands fa-youtube z-10"></i></a>
+                  </div>
+                  <div class="social-icon">
+                    <i class="fa-brands fa-github z-10"></i>
+                  </div>
+                </div>
+            </div>
+            <!-- <a href="#" class="btn btn-primary">Here Me!</a> -->
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Works ~~~~~~~~~~~~~~~-->
+      <section id="project" class="container">
+        <div class="flex flex-col items-center gap-5 text-center">
+          <h2 class="subtitle">Works</h2>
+        </div>
+
+        <div class="relative w-max mx-auto my-10 h-10 text-xs grid grid-cols-3 items-center px-[3px] rounded-full bg-darkColorLight dark:bg-darkColorLight border border-darkColor overflow-hidden transition md:h-12 md:text-base">
+          <!-- indicator -->
+          <div class="indicator absolute h-9 my-auto top-0 bottom-0 left-0 rounded-full bg-primaryColorLight md:h-11"></div>
+            <!-- <button class="tab relative block h-8 px-3 rounded-full text-darkColor dark:text-whiteColor md:h-10 md:px-6" data-tabs="all">All</button>
+
+            <button class="tab relative block h-8 px-3 rounded-full text-darkColor dark:text-whiteColor md:h-10 md:px-6" data-tabs="networkings">Networking</button>
+
+            <button class="tab relative block h-8 px-3 rounded-full text-darkColor dark:text-whiteColor md:h-10 md:px-6" data-tabs="apps"></button> -->
+            <audio src=""></audio>
+        </div>
+
+        <div class="mt-6 relative rounded-3xl">
+          <!-- blob -->
+           <div class="absolute top-1/2
+            left-1/2 transform -translation-x-1/2 -translate-y-1/2 w-80 h-80 bg-sectionColor mix-blend-screen rounded-full blur-[150px] opacity-50"></div>
+            <ul class="grid grid-cols-1 gap-5 lg:gap-10 md:grid-cols-2">
+              <!-- Networking -->
+               <li class="work_card networking relative bg-slate-300 dark:bg-darkColorLight p-5 rounded-2xl border border-transparent hover:border-primaryColorLight duration-300 overflow-hidden lg:p-8">
+                <img src="img/burger-1.png" alt="works" class="w-full">
+
+                <div class="absolute left-0 right-0 bottom-[100%] p-5 lg:p-8">
+                  <div class="flex items-center justify-between bg-gradient-to-r from-sectionColor to-primaryColorLight text-whiteColor p-5 rounded-t-2xl">
+                    <div>
+                      <p class="text-2xl font-bold lg:text-3xl">Networking</p>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, quisquam.</p>
+                    </div>
+                    <div class="text-2xl rotate-45">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                    </div>
+                  </div>
+                </div>
+               </li>
+               <!-- branding -->
+               <li class="work_card networking relative bg-slate-300 dark:bg-darkColorLight p-5 rounded-2xl border border-transparent hover:border-primaryColorLight duration-300 overflow-hidden lg:p-8">
+                <img src="img/burger-2.png" alt="works" class="w-full">
+
+                <div class="absolute left-0 right-0 bottom-[100%] p-5 lg:p-8">
+                  <div class="flex items-center justify-between bg-gradient-to-r from-sectionColor to-primaryColorLight text-whiteColor p-5 rounded-t-2xl">
+                    <div>
+                      <p class="text-2xl font-bold lg:text-3xl">Networking</p>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, quisquam.</p>
+                    </div>
+                    <div class="text-2xl rotate-45">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                    </div>
+                  </div>
+                </div>
+               </li>
+
+               <li class="work_card app relative bg-slate-300 dark:bg-darkColorLight p-5 rounded-2xl border border-transparent hover:border-primaryColorLight duration-300 overflow-hidden lg:p-8">
+                <img src="img/burger-3.png" alt="works" class="w-full">
+
+                <div class="absolute left-0 right-0 bottom-[100%] p-5 lg:p-8">
+                  <div class="flex items-center justify-between bg-gradient-to-r from-sectionColor to-primaryColorLight text-whiteColor p-5 rounded-t-2xl">
+                    <div>
+                      <p class="text-2xl font-bold lg:text-3xl">Networking</p>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, quisquam.</p>
+                    </div>
+                    <div class="text-2xl rotate-45">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                    </div>
+                  </div>
+                </div>
+               </li>
+
+               <li class="work_card app relative bg-slate-300 dark:bg-darkColorLight p-5 rounded-2xl border border-transparent hover:border-primaryColorLight duration-300 overflow-hidden lg:p-8">
+                <img src="img/burger-5.png" alt="works" class="w-full">
+
+                <div class="absolute left-0 right-0 bottom-[100%] p-5 lg:p-8">
+                  <div class="flex items-center justify-between bg-gradient-to-r from-sectionColor to-primaryColorLight text-whiteColor p-5 rounded-t-2xl">
+                    <div>
+                      <p class="text-2xl font-bold lg:text-3xl">Networking</p>
+                      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae, quisquam.</p>
+                    </div>
+                    <div class="text-2xl rotate-45">
+                      <i class="fa-solid fa-arrow-right-long"></i>
+                    </div>
+                  </div>
+                </div>
+               </li>
+              
+            </ul>
+           </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ About ~~~~~~~~~~~~~~~-->
+      <section id="about">
+
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Skills ~~~~~~~~~~~~~~~-->
+      <section class="container" id="skills">
+        <div class="flex flex-col items-center gap-5 text-center">
+          <h2 class="subtitle">My Skills</h2>
+          <p class="max-w-2xl">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aperiam, quisquam?</p>
+        </div>
+
+        <div class="flex flex-wrap justify-center gap-5 md:gap-10 mt-10">
+          <!-- Debian -->
+          <div class="skills_card max-w-44 w-full">
+            <div class="bg-fuchsia-100 dark:bg-darkColorLight grid place-items-center px-4 py-7 rounded-3xl space-y-5 grayscale-[85%] hover:grayscale-0 hover:border-primaryColorLight duration-300">
+              <img src="img/debian.svg" alt="debian" class="max-w-16 w-full">
+              <p class="text-2xl font-bold">85%</p>
+            </div>
+            <p class="text-center text-sectionColor mt-3 capitalize">Debian</p>
+          </div>
+          <!-- cisco -->
+          <div class="skills_card max-w-44 w-full">
+            <div class="bg-fuchsia-100 dark:bg-darkColorLight grid place-items-center px-4 py-7 rounded-3xl space-y-5 grayscale-[85%] hover:grayscale-0 hover:border-primaryColorLight duration-300">
+              <img src="img/cisco.svg" alt="debian" class="max-w-16 w-full">
+              <p class="text-2xl font-bold">85%</p>
+            </div>
+            <p class="text-center text-sectionColor mt-3 capitalize">Cisco</p>
+          </div>
+          <!-- tailwinds -->
+          <div class="skills_card max-w-44 w-full">
+            <div class="bg-fuchsia-100 dark:bg-darkColorLight grid place-items-center px-4 py-7 rounded-3xl space-y-5 grayscale-[85%] hover:grayscale-0 hover:border-primaryColorLight duration-300">
+              <img src="img/tailwindcss.svg" alt="debian" class="max-w-16 w-full">
+              <p class="text-2xl font-bold">80%</p>
+            </div>
+            <p class="text-center text-sectionColor mt-3 capitalize">Tailwindcss</p>
+          </div>
+          <!-- python -->
+          <div class="skills_card max-w-44 w-full">
+            <div class="bg-fuchsia-100 dark:bg-darkColorLight grid place-items-center px-4 py-7 rounded-3xl space-y-5 grayscale-[85%] hover:grayscale-0 hover:border-primaryColorLight duration-300">
+              <img src="img/python.svg" alt="debian" class="max-w-16 w-full">
+              <p class="text-2xl font-bold">75%</p>
+            </div>
+            <p class="text-center text-sectionColor mt-3 capitalize">Python</p>
+          </div>
+        </div>
+      </section>
+
+      <!--~~~~~~~~~~~~~~~ Contact ~~~~~~~~~~~~~~~-->
+      <section class="container" id="contact">
+        <div class="flex flex-col md:flex-row-reverse gap-16 md:gap-5 md:items-center">
+          <!-- cont -->
+          <div class="space-y-7 md:space-y-10 lg:pl-20 xl:pl-40">
+           <div class="flex items-start gap-4">
+            <div class="text-whiteColor bg-gradient-to-b from-primaryColorLight to-sectionColor h-10 w-10 lg:h-14 lg:w-14 rounded-full grid place-items-center">
+              <i class="fa-solid fa-phone"></i>
+            </div>
+            <div class="space-y-1">
+              <p class="text-sm">Email</p>
+              <p class="font-bold hover:text-primaryColorLight duration-300 cursor-pointer">arvinogatya@gmail.com</p>
+            </div>
+           </div>
+
+           <div class="flex items-start gap-4">
+            <div class="text-whiteColor bg-gradient-to-b from-primaryColorLight to-sectionColor h-10 w-10 lg:h-14 lg:h-0-14 lg:w-14 rounded-full grid place-items-center">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="space-y-1">
+              <p class="text-sm">Address</p>
+              <p class="font-bold hover:text-primaryColorLight duration-300 cursor-pointer">Pacitan, Jawa Timur, Indoensia</p>
+            </div>
+           </div>
+        </div>
+
+        <!-- cont form -->
+         <form class="flex-1 bg-slate-400 dark:bg-darkColorLight border border-primaryColorLight px-5 py-10 rounded-3xl space-y-3">
+          <div>
+            <h2>Let's work</h2>
+          </div>
+
+          <div class="space-y-3 mt-7">
+            <div class="flex flex-col md:flex-row items-center gap-3">
+              <input type="text" placeholder="First Name" name="firstname" autocomplete="off"/>
+
+              <input type=text" placeholder="Last Name" name="lastname" autocomplete="off"/>
+            </div>
+            <div class="flex flex-col md:flex-row items-center gap-3">
+              <input type="email" placeholder="Email Address" name="name" autocomplete="off"/>
+
+              <input type="phone" placeholder="Phone Nummber" name="phone" autocomplete="off"/>
+            </div>
+          </div>
+
+          <div class="space-y-7">
+            <textarea name="message" rows="5" placeholder="Message"></textarea>
+            <button class="btn btn-primary">
+              <span>send message</span>
+            </button>
+          </div>
+         </form>
+        </div>
+      </section>
+    </main>
+    <!--~~~~~~~~~~~~~~~ Footer ~~~~~~~~~~~~~~~-->
+    <footer>
+      <section id="footer" class="bg-primaryColor dark:bg-darkColorLight py-10">
+        <div class="container flex flex-col items-center gap-5">
+          <div class="py-5">
+            <img src="./img/11.png" alt="footer logo" class="w-10">
+          </div>
+
+          <div>
+            <ul class="flex flex-wrap justify-center items-center space-x-3 gap-5">
+              <li>
+                <a href="#" class="nav-link">Home</a>
+              </li>
+
+              <li>
+                <a href="#" class="nav-link">Project</a>
+              </li>
+
+              <li>
+                <a href="#" class="nav-link">Skills</a>
+              </li>
+
+              <li>
+                <a href="#" class="nav-link">Contact</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="text-primaryColorLight">
+            <p>&copy; 2024 All rights reserved by <span class="font-bold">ArvinoGatya.</span></p>
+          </div>
+        </div>
+      </section>
+    </footer>
+
+    <!--~~~~~~~~~~~~~~~ Scroll Up ~~~~~~~~~~~~~~~-->
+    <!-- <a href="#" id="scroll-up" class="fixed right-10 bottom-0 bg-primaryColorLight px-4 py-2 rounded-full text-lg text-darkColor dark:text-whiteColor dark:bg-primaryColorLight z-50 hover:-translate-y-1 ease-in duration-200">
+      <i class="fa-solid fa-arrow-up"></i>
+    </a> -->
+    <!--~~~~~~~~~~~~~~~ Swiper JS ~~~~~~~~~~~~~~~-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <!--~~~~~~~~~~~~~~~ Scroll Reveal ~~~~~~~~~~~~~~~-->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!--~~~~~~~~~~~~~~~ Main.js ~~~~~~~~~~~~~~~-->
+    <script src="./src/main.js"></script>
+  </body>
+</html>

@@ -1,96 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Nunito:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer {
-    html {
-        @apply scroll-smooth;
-    }
-    body {
-        @apply bg-primaryColor dark:bg-darkColor dark:text-textColor  tracking-wider font-dmsans ;
-    }
-
-    section {
-        @apply pt-16 pb-4 md:pt-20;
-    }
-
-    input,
-    textarea {
-        @apply w-full dark:bg-darkColor border border-gray-800 px-4 py-3 rounded-lg;
-    }
-
-    input:focus,
-    input:active,
-    textarea:focus,
-    textarea:active {
-        @apply outline-none border-primaryColorLight;
-    }
+body {
+    font-family: "Inter", sans-serif;
+    background: #eaf4f4;
 }
 
-@layer components {
-    .btn {
-        @apply inline-block text-sm py-3 px-8 capitalize text-center cursor-pointer rounded-md ease-linear duration-200;
-    }
+.navbar-fixed {
+    @apply fixed z-[9999] bg-white bg-opacity-80;
+    backdrop-filter: blur(5px);
+    box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+.menu-line {
+    @apply w-[30px] h-[2px] my-2 block bg-drak;
+}
 
-    .btn-primary {
-        @apply border-primaryColor rounded-full bg-gradient-to-r from-primaryColorLight to-primaryColor text-whiteColor px-7 py-3 capitalize font-bold flex justify-center items-center bg-primaryColorLight hover:opacity-75;
-    }
+.menu-active span:nth-child(1) {
+    @apply  rotate-45;
+}
 
-    .btn_outline {
-        @apply border border-primaryColorLight text-primaryColorLight py-4 px-9 rounded-full hover:bg-primaryColorLight hover:text-whiteColor dark:text-whiteColor duration-300;
-    }
+.menu-active span:nth-child(2) {
+    @apply scale-0;
+}
+.menu-active span:nth-child(3) {
+    @apply -rotate-45;
+}
 
-    
-
-    
-@layer utilities {
-    .home__title {
-        @apply text-4xl font-oswald font-bold lg:text-6xl;
-    }
-
-    .title {
-        @apply text-4xl lg:text-6xl xl:text-[65px] font-bold bg-gradient-to-r from-primaryColorLight to-purple-900 dark:to-whiteColor inline-block text-transparent bg-clip-text pb-2;
-    }
-
-    .separator {
-        @apply w-28 h-[2px] bg-secondaryColor my-5;
-    }
-
-    .paragraph {
-        @apply text-paragraphColor text-xs leading-5;
-    }
-
-    .social-icon {
-        @apply relative border border-primaryColorLight text-primaryColorLight dark:text-whiteColor dark:hover:text-primaryColorLight h-10 w-10 rounded-full grid place-items-center cursor-pointer hover:text-darkColor duration-300;
-    }
-
-    .indicator {
-        transition: left 0.4s;
-    }
-
-    .work_card > div {
-        @apply duration-500;
-    }   
-
-    .work_card:hover > div {
-        @apply bottom-0;
-    }
-
-    .work_card div i {
-        @apply duration-300 delay-300;
-    }
-
-    .work_card:hover div i {
-        @apply -rotate-90;
-    }
-
-    .skills_card img {
-        @apply duration-300;
-    }
-
-    .skills_card:hover img {
-        @apply scale-110;
-    }
+.rounded-full {
+    border-radius: 7000px;
+}
+.shadow-md {
+    --tw-shadow: 10px 15px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+    --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+    box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
